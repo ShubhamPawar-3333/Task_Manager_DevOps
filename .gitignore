@@ -1,0 +1,6 @@
+backend/tasks.db
+backend/bin/
+backend/*.log
+frontend/node_modules/
+frontend/dist/
+frontend/build/
