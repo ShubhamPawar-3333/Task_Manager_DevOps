@@ -10,8 +10,8 @@ A modern, scalable Task Manager application built as a microservices project to 
 
 ## Structure
 
-- `backend/`: Go backend code, including SQLite database logic, Gin API endpoints, and configuration.
-- `frontend/`: React frontend code, styled with Tailwind CSS and powered by Vite for development.
+- `Taks-Manager-Backend/`: Go backend code, including SQLite database logic, Gin API endpoints, and configuration.
+- `Task-Manager-Frontend/`: React frontend code, styled with Tailwind CSS and powered by Vite for development.
 
 ## Tools & Technologies
 
@@ -40,13 +40,13 @@ A modern, scalable Task Manager application built as a microservices project to 
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/username/task-manager.git
-   cd task-manager
+   git clone https://github.com/username/Task_Manager_DevOps.git
+   cd Task_Manager_DevOps
    ```
 2. **Backend Setup**
     - Navigate to the backend directory:
         ```bash
-        cd backend
+        cd Task-Manager-Backend
         ```
     - Ensure Go is installed and the `modernc.org/sqlite` package is available (handled by `go.mod`).
     - Run the backend:
