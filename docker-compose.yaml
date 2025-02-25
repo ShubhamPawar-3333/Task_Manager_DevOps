@@ -1,15 +1,15 @@
 services:
   backend:
-    image: Task-Manager-Backend:latest
+    image: task-manager-backend:latest
     build: ./Task-Manager-Backend
     ports:
       - "8080:8080"
     volumes:
       - Task-Manager-db:/app
   frontend:
-    image: Task-Manager-Frontend:latest
+    image: task-manager-frontend:latest
     build: ./Task-Manager-Frontend
     ports:
       - "80:80"
 volumes:
-  Task-Manager-db
+  Task-Manager-db:
