@@ -6,10 +6,17 @@ services:
       - "8080:8080"
     volumes:
       - Task-Manager-db:/app
+    networks:
+      - task-manager-net
   frontend:
     image: task-manager-frontend:latest
     build: ./Task-Manager-Frontend
     ports:
       - "80:80"
+  networks:
+    - task-manager-net
+networks:
+  task-manager-net:
+    driver: bridge
 volumes:
   Task-Manager-db:
