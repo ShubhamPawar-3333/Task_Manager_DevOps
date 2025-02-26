@@ -11,7 +11,7 @@ const App = () => {
   const fetchTasks = async () => {
     setLoading(true);
     try {
-      const res = await fetch('http://localhost:8080/tasks');
+      const res = await fetch('http://backend:8080/tasks');
       if (!res.ok) throw new Error('Failed to fetch tasks');
       const data = await res.json();
       console.log('Tasks data after fetch:', data); // Debug log
@@ -32,7 +32,7 @@ const App = () => {
   const addTask = async () => {
     if (!title.trim()) return;
     try {
-      const res = await fetch('http://localhost:8080/tasks', {
+      const res = await fetch('http://backend:8080/tasks', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ title, completed: false }),
@@ -53,7 +53,7 @@ const App = () => {
     console.log('Tasks after optimistic update:', updatedTasks); // Debug log
     setTasks(updatedTasks);
     try {
-      const res = await fetch(`http://localhost:8080/tasks/${id}`, {
+      const res = await fetch(`http://backend:8080/tasks/${id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ completed: !completed }), // Send only completed
@@ -70,7 +70,7 @@ const App = () => {
   const deleteTask = async (id) => {
     setTasks(tasks.filter(task => task.id !== id));
     try {
-      const res = await fetch(`http://localhost:8080/tasks/${id}`, {
+      const res = await fetch(`http://backend:8080/tasks/${id}`, {
         method: 'DELETE',
       });
       if (!res.ok) throw new Error('Failed to delete task');
