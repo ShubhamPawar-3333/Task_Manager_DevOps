@@ -13,8 +13,8 @@ services:
     build: ./Task-Manager-Frontend
     ports:
       - "80:80"
-  networks:
-    - task-manager-net
+    networks:
+      - task-manager-net
 networks:
   task-manager-net:
     driver: bridge
